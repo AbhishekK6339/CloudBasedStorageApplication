@@ -1,8 +1,6 @@
-/* styles.css */
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #DAF7A6;
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,44 +9,92 @@ body {
     height: 100vh;
 }
 
-form {
+.container {
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+form {
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #555;
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"]{
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    padding: 12px;
+    margin-bottom: 25px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
 }
 
-button {
+input[type="email"]{
+width: 100%;
+    padding: 12px;
+    margin-bottom: 25px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+}
+
+button[type="submit"] {
     background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
+    border-radius: 8px;
+    padding: 15px 20px;
     cursor: pointer;
     width: 100%;
+    font-size: 16px;
 }
 
-button:hover {
+button[type="submit"]:hover {
     background-color: #0056b3;
+}
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* styles.css */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda; /* Lighter background color */
+    border-color: #c3e6cb;
+}
+
+.alert-error {
+    color: #721c24;
+    background-color: #f8d7da; /* Lighter background color */
+    border-color: #f5c6cb;
 }

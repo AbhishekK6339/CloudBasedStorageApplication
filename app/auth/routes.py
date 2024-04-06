@@ -1,50 +1,61 @@
-# app/auth/routes.py
-
 from flask import Blueprint, render_template, request, redirect, url_for, flash
 from werkzeug.security import generate_password_hash, check_password_hash
-from app import mongo
+from app.mongo import mongo
 
 auth_blueprint = Blueprint('auth', __name__)
 
-@auth_blueprint.route('/signup', methods=['GET', 'POST'])
+@auth_blueprint.route('/signup', methods=['POST', 'GET'])
 def signup():
     if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
+        username = request.form.get('username')
+        email = request.form.get('email')
+        password = request.form.get('password')
+        confirm_password = request.form.get('confirm_password')
 
-        if not username or not password:
-            flash('Please provide both username and password', 'error')
+        # Validate password and confirm password
+        if password != confirm_password:
+            flash('Passwords do not match. Please try again.', 'error')
             return redirect(url_for('auth.signup'))
 
-        existing_user = mongo.db.users.find_one({'username': username})
+        # Check if username or email already exists
+        existing_user = mongo.db.users.find_one({'$or': [{'username': username}, {'email': email}]})
         if existing_user:
-            flash('Username already exists. Please choose a different one.', 'error')
+            flash('Username or email already exists. Please choose different ones.', 'error')
             return redirect(url_for('auth.signup'))
 
+        # Hash the password
         hashed_password = generate_password_hash(password)
-        mongo.db.users.insert_one({'username': username, 'password': hashed_password})
-        flash('Account created successfully. You can now log in.', 'success')
-        return redirect(url_for('auth.login'))
+
+        # Store user data in the database
+        try:
+            mongo.db.users.insert_one({'username': username, 'email': email, 'password': hashed_password})
+            flash('Account created successfully. You can now log in.', 'success')
+            return redirect(url_for('auth.login'))
+        except Exception as e:
+            flash('An error occurred while creating your account. Please try again later.', 'error')
+            app.logger.error(f"Error creating user: {e}")
 
     return render_template('signup.html')
 
 @auth_blueprint.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
+        username = request.form.get('username')
+        password = request.form.get('password')
 
-        if not username or not password:
-            flash('Please provide both username and password', 'error')
+        # Check if username exists in the database
+        user = mongo.db.users.find_one({'username': username})
+        if not user:
+            flash('No user found with this username. Please sign up first.', 'error')
             return redirect(url_for('auth.login'))
 
-        user = mongo.db.users.find_one({'username': username})
-        if not user or not check_password_hash(user['password'], password):
-            flash('Invalid username or password', 'error')
+        # Validate password
+        if not check_password_hash(user['password'], password):
+            flash('Invalid password. Please try again.', 'error')
             return redirect(url_for('auth.login'))
 
         # Login successful
         flash('Login successful!', 'success')
-        return redirect(url_for('index'))
+        return redirect(url_for('upload.upload'))  # Redirect to the upload page after login
 
     return render_template('login.html')

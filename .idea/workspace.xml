@@ -4,22 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ef277e6-80f4-40cd-9178-bf2be9c95cd9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/CloudBasedStorageApplication.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/auth/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/auth/routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/mongo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/signup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="7ef277e6-80f4-40cd-9178-bf2be9c95cd9" name="Changes" comment="commit">
+      <change afterPath="$PROJECT_DIR$/app/templates/upload.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/upload/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/upload/routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/local_storage/Screenshot (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/local_storage/Screenshot (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/local_storage/Screenshot (9).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storagemain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/auth/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/auth/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mongo.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/mongo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,14 +31,26 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "AbhishekK6339"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/AbhishekK6339/CloudBasedStorageApplication.git",
+    "accountId": "d9eca460-8b53-4313-8397-8f1488d9fd47"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -48,24 +62,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python tests.Python tests for test_auth.TestAuthEndpoints.executor": "Run",
-    "Python tests.Python tests for test_auth.TestAuthEndpoints.test_signup.executor": "Run",
-    "Python tests.Python tests in test_auth.py.executor": "Run",
-    "Python.__init__ (1).executor": "Run",
-    "Python.__init__.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.test_auth.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python tests.Python tests for test_auth.TestAuthEndpoints.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_auth.TestAuthEndpoints.test_signup.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_auth.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__ (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mongo.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_auth.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\abeyp\PycharmProjects\CloudBasedStorageApplication" />
       <recent name="C:\Users\abeyp\PycharmProjects\CloudBasedStorageApplication\app" />
     </key>
   </component>
@@ -136,19 +152,26 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_auth.TestAuthEndpoints" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="mongo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CloudBasedStorageApplication" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_auth.TestAuthEndpoints&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/mongo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests for test_auth.TestAuthEndpoints.test_signup" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -166,7 +189,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_auth.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in C:/Users/abeyp/PycharmProjects/CloudBasedStorageApplication/app/test_auth.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="CloudBasedStorageApplication" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -183,18 +206,18 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.mongo" />
         <item itemvalue="Python.__init__ (1)" />
         <item itemvalue="Python.__init__" />
         <item itemvalue="Python tests.Python tests for test_auth.TestAuthEndpoints.test_signup" />
-        <item itemvalue="Python tests.Python tests in test_auth.py" />
-        <item itemvalue="Python tests.Python tests for test_auth.TestAuthEndpoints" />
+        <item itemvalue="Python tests.Python tests in C:/Users/abeyp/PycharmProjects/CloudBasedStorageApplication/app/test_auth.py" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-09665e90c3a7-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15026.15" />
+        <option value="bundled-python-sdk-0509580d9d50-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.14494.241" />
       </set>
     </attachedChunks>
   </component>
@@ -207,9 +230,20 @@
       <option name="presentableId" value="Default" />
       <updated>1712075864133</updated>
     </task>
+    <task id="LOCAL-00001" summary="commit">
+      <option name="closed" value="true" />
+      <created>1712161317943</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712161317943</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
 </project>
