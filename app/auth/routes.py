@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for, flash
+from flask import Blueprint, render_template, request, redirect, url_for, flash, session
 from werkzeug.security import generate_password_hash, check_password_hash
 from app.mongo import mongo
 
@@ -55,7 +55,16 @@ def login():
             return redirect(url_for('auth.login'))
 
         # Login successful
+        session['logged_in'] = True
+        session['username'] = username  # Optionally store username in session
         flash('Login successful!', 'success')
-        return redirect(url_for('upload.upload'))  # Redirect to the upload page after login
+        return redirect(url_for('upload.upload'))
 
     return render_template('login.html')
+
+@auth_blueprint.route('/logout',methods=['GET','POST'])
+def logout():
+    session.pop('logged_in', None)
+    session.pop('username', None)  # Clear username from session if stored
+    flash('You have been logged out.', 'info')
+    return redirect(url_for('auth.login'))

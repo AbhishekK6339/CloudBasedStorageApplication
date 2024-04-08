@@ -5,22 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ef277e6-80f4-40cd-9178-bf2be9c95cd9" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/app/templates/upload.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/upload/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/upload/routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/local_storage/Screenshot (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/local_storage/Screenshot (3).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/local_storage/Screenshot (9).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storagemain.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/local_storage/Screenshot (6).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/local_storage/Screenshot 2024-04-01 205145.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/auth/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/auth/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth/routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mongo.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/mongo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/upload.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/upload/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/upload/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local_storage/Screenshot (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local_storage/Screenshot (3).png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,24 +31,25 @@
       <list>
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "AbhishekK6339"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AbhishekK6339&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/AbhishekK6339/CloudBasedStorageApplication.git",
-    "accountId": "d9eca460-8b53-4313-8397-8f1488d9fd47"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AbhishekK6339/CloudBasedStorageApplication.git&quot;,
+    &quot;accountId&quot;: &quot;d9eca460-8b53-4313-8397-8f1488d9fd47&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -66,6 +65,7 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Docker.docker-compose.yml.mongo: Compose Deployment.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.Python tests for test_auth.TestAuthEndpoints.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.Python tests for test_auth.TestAuthEndpoints.test_signup.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.Python tests in test_auth.py.executor&quot;: &quot;Run&quot;,
@@ -174,6 +174,25 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.mongo: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="mongo" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for test_auth.TestAuthEndpoints.test_signup" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="CloudBasedStorageApplication" />
       <option name="ENV_FILES" value="" />
@@ -189,28 +208,13 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in C:/Users/abeyp/PycharmProjects/CloudBasedStorageApplication/app/test_auth.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="CloudBasedStorageApplication" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/app/test_auth.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml.mongo: Compose Deployment" />
         <item itemvalue="Python.mongo" />
         <item itemvalue="Python.__init__ (1)" />
         <item itemvalue="Python.__init__" />
         <item itemvalue="Python tests.Python tests for test_auth.TestAuthEndpoints.test_signup" />
-        <item itemvalue="Python tests.Python tests in C:/Users/abeyp/PycharmProjects/CloudBasedStorageApplication/app/test_auth.py" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712161317943</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit">
+      <option name="closed" value="true" />
+      <created>1712362607476</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712362607476</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

@@ -10,8 +10,8 @@ def init_mongo(app):
 
 #
 # # db = mongo.db
-# from pymongo import MongoClient
 #
+# from pymongo import MongoClient
 # # mongo_uri = "mongodb+srv://storageapp:Abhey123@cluster0.4xp0q36.mongodb.net/database"
 # mongo_uri = "mongodb+srv://storage:Abhey123@cluster0.i4dedvi.mongodb.net/"
 #

@@ -5,17 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Upload</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
     <div class="container">
+
         <h1>File Upload</h1>
+        <!-- Logout button -->
+                <div class="alert text-right" style="background-color: #d4edda; color: #155724; border-color: #c3e6cb;" role="alert">
+              <form action="{{ url_for('auth.logout') }}" method="post" >
+            <button type="submit" class="btn btn-danger">Logout</button>
+        </form>
+        </div>
+
+
+
+
+        <!-- Display flashed messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="alert" style="background-color: #d4edda; color: #155724; border-color: #c3e6cb;" role="alert">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <!-- Upload form -->
         <form action="" method="post" enctype="multipart/form-data">
             <label for="file">Choose a file:</label>
             <input type="file" id="file" name="file" required>
             <button type="submit">Upload</button>
         </form>
+
+        <hr>
+
+        <!-- Uploaded files -->
+        <h2>Uploaded Files</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>File Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for file in uploaded_files %}
+                <tr>
+                    <td>{{ file }}</td>
+                    <td>
+                        <a href="{{ url_for('upload.download', filename=file) }}" class="btn btn-success" download>Download</a>
+                        <a href="{{ url_for('upload.delete', filename=file) }}" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
     </div>
 </body>
 
